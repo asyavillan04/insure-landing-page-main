@@ -12,3 +12,19 @@
     background-color: var(--color-bg-alt);
     color: var(--color-bg);
 }
+
+.advantages__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.advantades__advantage-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+@media (min-width: 769px) {
+    .advantages__wrapper {
+        flex-direction: row;
+    }
+}
