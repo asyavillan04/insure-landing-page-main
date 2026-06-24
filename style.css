@@ -1,8 +1,8 @@
 :root {
     --color-bg-footer: hsl(0, 0%, 98%);
-    --color-bg-alt: hsl(270, 9%, 17%);
+    --color-bg-alt: hsl(256, 26%, 20%);
 
-    --color-text: hsl(256, 26%, 20%);
+    --color-text: hsl(270, 9%, 17%);
     --color-text-alt: hsl(273, 4%, 51%);
 
     --color-icon: hsl(216, 30%, 68%);
@@ -29,6 +29,10 @@ main {
     flex-direction: column;
 }
 
+ul {
+  list-style: none;
+}
+
 section {
     display: flex;
     gap: 5vmin;
@@ -47,15 +51,16 @@ section {
 }
 
 .hero {
+    flex-direction: column-reverse;
     overflow-y: visible;
     position: relative;
     height: min-content;
     margin-bottom: 10vh;
+    padding: 0;
 }
 
 .hero__text {
-    width: 50%;
-    padding: 7vh 0;
+    padding: 7vh 7vw;
 
     display: flex;
     flex-direction: column;
@@ -63,12 +68,8 @@ section {
 }
 
 .hero__image-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%; 
-  z-index: 1; 
-  padding: inherit;
+    width: 100%;
+    height: auto; 
 }
 
 .hero img {
@@ -114,13 +115,37 @@ footer {
     display: flex;
     flex-direction: column;
 }
-.footer__footer-navigation nav {
+.footer__footer-navigation nav,
+.footer__footer-navigation ul  {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) {  /*-----------DESKTOP STYLES-------------*/
+
+    .hero {
+        flex-direction: row;
+    }
+
+    .hero__text {
+    width: 50%;
+    padding: 7vh 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    }
+
+    .hero__image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; 
+    z-index: 1; 
+    padding: inherit;
+    }
+
     .advantages__wrapper {
         flex-direction: row;
         gap: 5vw;
@@ -135,7 +160,8 @@ footer {
         grid-template-columns: repeat(8, 1fr);
     }
 
-    .footer__footer-navigation nav {
+    .footer__footer-navigation nav,
+    .footer__footer-navigation ul {
     text-align: start;
     }
 
