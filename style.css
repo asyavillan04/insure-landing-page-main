@@ -32,7 +32,6 @@ main {
 section {
     display: flex;
     gap: 5vmin;
-    width: 100%;
     padding: 10vh 10vw;
 }
 
@@ -51,6 +50,7 @@ section {
     overflow-y: visible;
     position: relative;
     height: min-content;
+    margin-bottom: 10vh;
 }
 
 .hero__text {
@@ -97,6 +97,11 @@ section {
 .advantage-image {
     width: 25%;
     height: auto;
+}
+
+.more {
+    padding: 2vw;
+    margin: 10vw;
 }
 
 @media (min-width: 769px) {
