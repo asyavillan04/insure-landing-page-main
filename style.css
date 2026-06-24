@@ -1,5 +1,5 @@
 :root {
-    --color-bg: hsl(0, 0%, 98%);
+    --color-bg-footer: hsl(0, 0%, 98%);
     --color-bg-alt: hsl(270, 9%, 17%);
 
     --color-text: hsl(256, 26%, 20%);
@@ -37,13 +37,13 @@ section {
 
 .accent-block {
     background-color: var(--color-bg-alt);
-    color: var(--color-bg);
+    color: var(--color-bg-footer);
 }
 
 .accent-block a {
     text-decoration: none;
     color: var(--color-bg);
-    border: 1px solid var(--color-bg);
+    border: 1px solid var(--color-bg-footer);
 }
 
 .hero {
@@ -104,6 +104,22 @@ section {
     margin: 10vw;
 }
 
+footer {
+    background-color: var(--color-bg-footer);
+}
+.footer-content {
+        padding: 10vh 10vw;
+}
+.footer__footer-navigation {
+    display: flex;
+    flex-direction: column;
+}
+.footer__footer-navigation nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 @media (min-width: 769px) {
     .advantages__wrapper {
         flex-direction: row;
@@ -111,5 +127,27 @@ section {
     }
     .advantades__advantage-card {
         text-align: start;
+    }
+
+
+    .footer__footer-navigation {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .footer__footer-navigation nav {
+    text-align: start;
+    }
+
+    .nav-help {
+        grid-column: 3 / 4;
+    }
+
+    .nav-contact{
+        grid-column: 5 / 6;
+    }
+
+    .nav-others {
+        grid-column: 7 / 8;
     }
 }
