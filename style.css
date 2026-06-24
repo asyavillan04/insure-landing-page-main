@@ -1,0 +1,14 @@
+:root {
+    --color-bg: hsl(0, 0%, 98%);
+    --color-bg-alt: hsl(270, 9%, 17%);
+
+    --color-text: hsl(256, 26%, 20%);
+    --color-text-alt: hsl(273, 4%, 51%);
+
+    --color-icon: hsl(216, 30%, 68%);
+}
+
+.accent-block {
+    background-color: var(--color-bg-alt);
+    color: var(--color-bg);
+}
