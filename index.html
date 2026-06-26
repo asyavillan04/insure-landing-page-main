@@ -26,10 +26,12 @@
   <header>
     <img src="images/logo.svg" alt="Insure">
     <nav aria-label="navigation">
-      How we work
-      Blog
-      Account
-      View plans
+      <ul class="header__nav">
+      <li><a>How we work</a></li>
+      <li><a>Blog</a></li>
+      <li><a>Account</a></li>
+      <li><a>View plans</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -39,7 +41,7 @@
   <section class="hero accent-block">
 
     <div class="hero__text">
-      
+
       <h1>Humanizing your insurance. </h1>
 
       <p>Get your life insurance coverage easier and faster. We blend our expertise 
@@ -50,7 +52,28 @@
     </div>
 
     <div class="hero__image-wrapper">
+      <div class="hero-decoration-left">
+        <picture>
+          <source media="(max-width: 768px)" srcset="images/bg-pattern-intro-left-mobile.svg">
+          <img src="..." alt="">
+        </picture>
+      </div>
+
       <img class="hero__img" src="images/image-intro-desktop.jpg" alt="" aria-hidden="true">
+    </div>
+
+    <div class="hero-decoration-left-desktop">
+      <picture>
+        <source media="(min-width: 769px)" srcset="images/bg-pattern-intro-left-desktop.svg" aria-hidden="true">
+        <img src="..." alt="">
+      </picture>
+    </div>
+    
+    <div class="hero-decoration-right">
+      <picture>
+        <source media="(max-width: 768px)" srcset="images/bg-pattern-intro-right-mobile.svg">
+        <img src="images/bg-pattern-intro-right-desktop.svg" alt="" class="hero-decoration-right-desktop" aria-hidden="true">
+      </picture>
     </div>
   </section>
 
@@ -60,27 +83,27 @@
     <div class="advantages__wrapper">
       <div class="advantades__advantage-card">
     
-        <img class="advantage-image" src="images/icon-snappy-process.svg">
+        <img class="advantage-image" src="images/icon-snappy-process.svg" aria-hidden="true">
         <h3>Snappy Process</h3>
 
-        Our application process can be completed in minutes, not hours. Don’t get 
-        stuck filling in tedious forms.
+        <p>Our application process can be completed in minutes, not hours. Don’t get 
+        stuck filling in tedious forms.</p>
       </div>
 
       <div class="advantades__advantage-card">
         <img class="advantage-image" src="images\icon-affordable-prices.svg">
         <h3>Affordable Prices </h3>
 
-        We don’t want you worrying about high monthly costs. Our prices may be low, 
-        but we still offer the best coverage possible.
+        <p>We don’t want you worrying about high monthly costs. Our prices may be low, 
+        but we still offer the best coverage possible.</p>
       </div>
 
       <div class="advantades__advantage-card">
          <img class="advantage-image" src="images/icon-people-first.svg">
         <h3>People First</h3>
 
-        Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-        sure you’re covered when you need it.
+        <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make 
+        sure you’re covered when you need it.</p>
       </div>
 
     </div>
