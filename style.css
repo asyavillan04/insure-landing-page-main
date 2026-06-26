@@ -6,9 +6,16 @@
     --color-text-alt: hsl(273, 4%, 51%);
 
     --color-icon: hsl(216, 30%, 68%);
+
+    --gap-small: 4vmin;
+    --gap-medium: 8vmin;
+    --gap-height: 10vh;
+    --gap-width: 10vw;
+
 }
 
-*,
+
+*,                      /*----------GLOBALS---------*/
 *::before,
 *::after {
     box-sizing: border-box;
@@ -35,11 +42,18 @@ ul {
 
 section {
     display: flex;
-    gap: 5vmin;
-    padding: 10vh 10vw;
+    gap: var(--gap-small);
+    
+    padding: var(--gap-height) var(--gap-width);
 }
 
-.accent-block {
+header {
+    display: flex;
+    flex-direction: row;
+    padding: var(--gap-small);
+    justify-content: space-between;
+}
+.accent-block {       /*-------------HERO AND MORE--------*/
     background-color: var(--color-bg-alt);
     color: var(--color-bg-footer);
 }
@@ -93,6 +107,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: var(--gap-small);
 }
 
 .advantage-image {
@@ -115,17 +130,24 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
 .footer__footer-navigation nav,
 .footer__footer-navigation ul  {
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: var(--gap-small);
+}
+
+.footer__footer-navigation nav {
+    gap: var(--gap-medium);
 }
 
 @media (min-width: 769px) {  /*-----------DESKTOP STYLES-------------*/
 
     .hero {
         flex-direction: row;
+        padding: 10vh 10vw;
     }
 
     .hero__text {
@@ -152,6 +174,7 @@ footer {
     }
     .advantades__advantage-card {
         text-align: start;
+        align-items: start;
     }
 
 
