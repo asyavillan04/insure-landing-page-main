@@ -23,9 +23,16 @@
     padding: 0;
 }
 
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html, body {
     width: 100%;
     min-height: 100%;
+    font-family: "Karla", sans-serif;
 }
 
 p {
@@ -53,6 +60,11 @@ header {
     padding: var(--gap-small);
     justify-content: space-between;
 }
+
+h1, h2 {
+    font-family: "DM Serif Display", serif;
+}
+
 .accent-block {       /*-------------HERO AND MORE--------*/
     background-color: var(--color-bg-alt);
     color: var(--color-bg-footer);
@@ -62,6 +74,9 @@ header {
     text-decoration: none;
     color: var(--color-bg);
     border: 1px solid var(--color-bg-footer);
+    width: max-content;
+    padding: 10px 20px;
+    text-transform: uppercase;
 }
 
 .hero {
@@ -124,8 +139,20 @@ footer {
     background-color: var(--color-bg-footer);
 }
 .footer-content {
+    display: flex;
+    flex-direction: column;
         padding: 10vh 10vw;
+        gap: var(--gap-medium);
 }
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-small);
+}
+
 .footer__footer-navigation {
     display: flex;
     flex-direction: column;
@@ -177,6 +204,10 @@ footer {
         align-items: start;
     }
 
+    .footer__brand {
+    flex-direction: row;
+    justify-content: space-between;
+    }
 
     .footer__footer-navigation {
         display: grid;
