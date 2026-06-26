@@ -1,16 +1,17 @@
 :root {
     --color-bg-footer: hsl(0, 0%, 98%);
     --color-bg-alt: hsl(256, 26%, 20%);
+    --color-bg: #ffffff;
 
     --color-text: hsl(270, 9%, 17%);
     --color-text-alt: hsl(273, 4%, 51%);
 
     --color-icon: hsl(216, 30%, 68%);
 
-    --gap-small: 2vmin;
-    --gap-medium: 4vmin;
-    --gap-height: 10vh;
-    --gap-width: 10vw;
+    --gap-small: clamp(8px, 2vmin, 24px);
+    --gap-medium: clamp(12px, 4vmin, 40px);
+    --gap-height: clamp(40px, 10vh, 120px);
+    --gap-width: clamp(20px, 10vw, 150px);
 
 }
 
@@ -33,6 +34,7 @@ html, body {
     width: 100%;
     min-height: 100%;
     font-family: "Karla", sans-serif;
+    color: var(--color-text);
 }
 
 p {
@@ -56,22 +58,54 @@ section {
     padding: var(--gap-height) var(--gap-width);
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    padding: var(--gap-small);
-    justify-content: space-between;
-}
-
 h1, h2 {
     font-family: "DM Serif Display", serif;
     font-weight: 400;
+    margin: 0;
 }
 
 h1 {
     font-size: 5.5vmax;
     line-height: 0.9;
 }
+
+h2 {
+    width: 100%;
+    font-size: clamp(1.9rem, 3.9vmax, 2.8rem);
+}
+
+a {
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header {         /*--------------------HEADER---------------*/
+    display: flex;
+    flex-direction: row;
+    padding: var(--gap-medium) var(--gap-width);
+    justify-content: space-between;
+}
+.header__nav-link {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-alt);
+    &:hover {
+        color: var(--color-text);
+    }
+}
+.header__nav-link-view {
+    color: var(--color-text);
+    outline: 1px solid var(--color-text);
+    padding: 1vmin var(--gap-small);
+    &:hover {
+        background-color: var(--color-text);
+        color: var(--color-bg);
+    }
+}
+
+
 .accent-block {       /*-------------HERO AND MORE--------*/
     background-color: var(--color-bg-alt);
     color: var(--color-bg-footer);
@@ -84,7 +118,7 @@ h1 {
     width: max-content;
     padding: 10px 20px;
     text-transform: uppercase;
-    transition: 0.3s ease;
+    
     z-index: 5;
 
     &:hover {
@@ -146,9 +180,9 @@ h1 {
 
 .hero-decoration-right {
     right: 0;
-    bottom: -25vh;
+    top: 90%;
 }
-.advantages {
+.advantages {   /*------------------------ADVANTADES----------*/ 
     flex-direction: column;
     position: relative;
     gap: var(--gap-height);
@@ -193,11 +227,11 @@ h1 {
     height: auto;
 }
 
-.more {
+.more {    /*------------------------HOW WE WORK----------*/ 
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10vh 4vmax;
+    padding: 10vh 5vw;
     margin: 10vw;
     background-image: url('./images/bg-pattern-how-we-work-mobile.svg');
     background-size: auto 100%; 
@@ -205,7 +239,7 @@ h1 {
     background-repeat: no-repeat;
 }
 
-footer {
+footer {     /*------------------------FOOTER----------*/ 
     background-color: var(--color-bg-footer);
     background-image: url('./images/bg-pattern-footer-mobile.svg');
     background-position: left top;
@@ -223,19 +257,37 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--gap-small);
+    gap: var(--gap-medium);
 }
 
 .footer__social {
     display: flex;
     gap: var(--gap-medium);
 }
+
+.social-link {
+    color: var(--color-text-alt);
+    &:hover {
+        color: var(--color-text);
+    }
+}
 .footer__footer-navigation {
     display: flex;
     flex-direction: column;
     gap: var(--gap-medium);
+    color: var(--color-text);
+    font-weight: 700;
 }
-
+.footer__footer-navigation a{
+    color: var(--color-text);
+    font-weight: 700;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.footer__footer-navigation span {
+    color: var(--color-text-alt);
+}
 .footer__footer-navigation nav,
 .footer__footer-navigation ul  {
     display: flex;
@@ -344,10 +396,15 @@ footer {
     .more {
         flex-direction: row;
         justify-content: space-between;
+        text-align: start;
         background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
         background-size: auto 100%;
         background-position: right center;
         background-repeat: no-repeat;
+    }
+
+    h2 {
+        width: 50%;
     }
 
     footer {
