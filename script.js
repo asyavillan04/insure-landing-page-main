@@ -11,7 +11,6 @@ function toggleMenu() {
 
 navToggle.addEventListener('click', toggleMenu);
 
-// Закрытие по Escape
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape' && nav.classList.contains('is-open')) {
     toggleMenu();
