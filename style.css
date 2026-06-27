@@ -165,7 +165,7 @@ a {
     z-index: 5;
 
     &:hover {
-        background-color: #ffffff;
+        background-color: var(--color-bg);
         color: var(--color-bg-alt)
     }
 }
