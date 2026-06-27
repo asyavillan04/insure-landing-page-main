@@ -150,8 +150,12 @@ header {         /*--------------------HEADER---------------*/
     color: var(--color-bg-footer);
 }
 
+a {
+    font-size: 0.8rem;
+}
 .accent-block a {
     text-decoration: none;
+    font-weight: 700;
     color: var(--color-bg);
     border: 1px solid var(--color-bg-footer);
     width: max-content;
@@ -502,6 +506,8 @@ footer {     /*------------------------FOOTER----------*/
     .footer__footer-navigation {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
+        text-transform: uppercase;
+        font-size: 0.8rem;
     }
 
     .footer__footer-navigation nav,
