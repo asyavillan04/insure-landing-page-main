@@ -64,12 +64,12 @@ h1, h2 {
     margin: 0;
 }
 
-h1 {
+h1, h2 {
     font-size: 5.5vmax;
     line-height: 0.9;
 }
 
-h2 {
+.more h2 {
     width: 100%;
     font-size: clamp(1.9rem, 3.9vmax, 2.8rem);
 }
@@ -485,7 +485,7 @@ footer {     /*------------------------FOOTER----------*/
         background-repeat: no-repeat;
     }
 
-    h2 {
+    .more h2 {
         width: 50%;
     }
 
