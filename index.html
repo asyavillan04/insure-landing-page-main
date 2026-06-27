@@ -25,13 +25,15 @@
 
   <header>
     <img src="images/logo.svg" alt="Insure">
-
-    <nav aria-label="navigation">
+    <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-navigation">
+      <img class="nav-toggle__icon" src="images/icon-hamburger.svg" alt="">
+    </button>
+    <nav id="primary-navigation" aria-label="navigation">
       <ul class="header__nav">
-      <li><a href="" class="header__nav-link">How we work</a></li>
-      <li><a href="" class="header__nav-link">Blog</a></li>
-      <li><a href="" class="header__nav-link">Account</a></li>
-      <li><a href="" class="header__nav-link-view header__nav-link">View plans</a></li>
+        <li><a href="#" class="header__nav-link">How we work</a></li>
+        <li><a href="#" class="header__nav-link">Blog</a></li>
+        <li><a href="#" class="header__nav-link">Account</a></li>
+        <li><a href="#" class="header__nav-link-view header__nav-link">View plans</a></li>
       </ul>
     </nav>
   </header>
@@ -196,5 +198,7 @@
     </div>
 
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
