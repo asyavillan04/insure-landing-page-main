@@ -136,7 +136,7 @@ header {         /*--------------------HEADER---------------*/
   left: 0;
   width: 100%;
   height: 100vh;
-  padding: 20px;
+  padding: var(--gap-medium);
   z-index: 100;
   background-color: var(--color-text);
   background-image: url('images/bg-pattern-mobile-nav.svg');
@@ -343,7 +343,7 @@ footer {     /*------------------------FOOTER----------*/
     gap: var(--gap-medium);
 }
 
-@media (min-width: 769px) {  /*-----------DESKTOP STYLES-------------*/
+@media (min-width: 48em) {  /*-----------DESKTOP STYLES-------------*/
 
     .header__nav {
         flex-direction: row;
